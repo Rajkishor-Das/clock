@@ -1,0 +1,182 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+html,body{
+    display: grid;
+    height: 100%;
+    place-items: center;
+    background-color: #2e2e45;
+}
+.digital{
+    height: 100px;
+    width: 360px;
+    position: relative;
+    background: linear-gradient(135deg, #14ffe9,#ffeb3b,#ff00e0);
+    border-radius: 10px;
+    cursor: default;
+    animation: animate 1.5s linear infinite;
+}
+.digital .digital-clock,
+.digital span{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+.digital .digital-clock{
+    z-index: 999;
+    height: 85px;
+    width: 345px;
+    background: #2d2f38;
+    border-radius: 6px;
+    text-align: center;
+}
+.digital-clock #time{
+    line-height: 85px;
+    color: #fff;
+    font-size: 50px;
+    font-weight: 600;
+    letter-spacing: 1px;
+    background: linear-gradient(135deg, #14ffe9,#ffeb3b,#ff00e0);
+    -webkit-text-fill-color:transparent;
+    -webkit-background-clip: text;
+    animation: animate 1.5s linear infinite;
+}
+
+@keyframes animate{
+    100%{
+        filter:hue-rotate(360deg);
+    }
+}
+
+.digital span{
+    height: 100%;
+    width: 100%;
+    border-radius: 10px;
+    background: inherit;
+}
+.digital span:first-child{
+    filter: blur(7px);
+}
+.digital span:last-child{
+    filter: blur(20px);
+}
+
+
+/* Clock CSS code start */
+
+#clock{
+    width: 35vw;
+    height: 35vw;
+    border-radius: 50%;
+    background: url(clock.png) no-repeat;
+    background-size: 100%;
+    position: relative;
+}
+
+#hour , #minute, #second{
+    position: absolute;
+    background-color: black;
+    border-radius: 10px;
+    transform-origin: bottom;
+}
+#hour{
+    width: 2.5%;
+    height: 22%;
+    left: 48.6%;
+    top: 29%;
+    opacity: 0.9;
+}
+#minute{
+    width: 1.8%;
+    height: 25%;
+    left: 49%;
+    top: 26%;
+    opacity: 0.8;
+}
+#second{
+    width: 1%;
+    height: 29%;
+    left: 49.45%;
+    top: 22%;
+}
+
+@media (max-width:400px) {
+    .digital{
+        width: 90vw;
+        height: 92px;
+    }
+    .digital .digital-clock{
+        height: 80px;
+        width: 87vw;
+    }
+    .digital-clock #time{
+        line-height: 80px;
+        font-size: 47px;
+        font-weight: 600;
+    }
+
+    /* Clock CSS code start */
+
+    #clock{
+        width: 65vw;
+        height: 65vw;
+        margin-bottom: 50px;
+    }
+}
+
+@media (min-width:400px) and (max-width:1100px) {
+    .digital{
+        width: 410px;
+        height: 92px;
+    }
+    .digital .digital-clock{
+        height: 80px;
+        width: 400px;
+    }
+    .digital-clock #time{
+        line-height: 80px;
+        font-size: 47px;
+        font-weight: 600;
+    }
+}
+@media (min-width:400px) and (max-width:1100px) {
+    /* Clock CSS code start */
+
+    #clock{
+        width: 55vw;
+        height: 55vw;
+        margin-bottom: 50px;
+    }
+}
+
+@media (min-width:1100px) and (max-width:1500) {
+    .digital{
+        width: 40vw;
+        height: 92px;
+    }
+    .digital .digital-clock{
+        height: 80px;
+        width: 38.3vw;
+    }
+    .digital-clock #time{
+        line-height: 80px;
+        font-size: 47px;
+        font-weight: 600;
+    }
+
+    /* Clock CSS code start */
+
+    #clock{
+        width: 35vw;
+        height: 35vw;
+        margin-bottom: 50px;
+    }
+}
+
+
+
+
